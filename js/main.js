@@ -120,7 +120,14 @@ const showTaskByComplete = (task) => {
 const isTaskToday = (task) => {
   // Check if the year, month and date match this task's start properties
   // Return true if so, otherwise false
-  return true;
+  if(task.start.year == today.getFullYear() && 
+  task.start.month == today.getMonth() +1 &&
+  task.start.date == today.getDate()) {
+    return true;
+  }
+  else {
+    return false;
+  }
 }
 
 
